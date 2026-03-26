@@ -2,6 +2,7 @@ import Arrays.Actv1;
 import Arrays.Actv2;
 import Arrays.Actv3;
 import matrices.*;
+import EjercicioIndividual.TemperatureHistory;
 
 import java.util.Scanner;
 
@@ -21,7 +22,9 @@ public class Main {
             System.out.println("4. Actividad 1: Declaración y creación de una matriz");
             System.out.println("5. Actividad 2: Recorrer la matriz");
             System.out.println("6. Actividad 3: operaciones con matriz");
-            System.out.println("7. Salir");
+            System.out.println("Ejercicio Individual por estudiante:");
+            System.out.println("7. Ejercicio 13 Historial de temperaturas");
+            System.out.println("8. Salir");
             int opcion = new Scanner(System.in).nextInt();
 
             switch (opcion) {
@@ -55,6 +58,25 @@ public class Main {
                     matrices.Actv2.recorrerPorFilas(matriz);
                     break;
                 case 7:
+                    System.out.println("De cuantos dias va a tomar la temperatura? (máximo 30)");
+                    int dias = new Scanner(System.in).nextInt();
+                    if (dias > 30) {
+                        System.out.println("El número de días no puede ser mayor a 30. Se establecerá en 30.");
+                        dias = 30;
+                    }
+                    TemperatureHistory tempHistory = new TemperatureHistory(dias);
+                    for (int i = 1; i <= dias; i++) {
+                        System.out.print("Ingrese la temperatura del día " + i + ": ");
+                        double temp = new Scanner(System.in).nextDouble();
+                        tempHistory.setTemperature(i, temp);
+                    }
+                    System.out.println("Promedio de temperaturas: " + tempHistory.getAverageTemperature() + "°C");
+                    System.out.println("Temperatura más fría: " + tempHistory.getMinTemperature() + "°C");
+                    System.out.println("Temperatura más cálida: " + tempHistory.getMaxTemperature() + "°C");
+                    System.out.println("Gráfico de temperaturas:");
+                    tempHistory.printTemperatureGraph();
+                    break;
+                case 8:
                     System.out.println("Saliendo del programa...");
                     return;
                 default:
