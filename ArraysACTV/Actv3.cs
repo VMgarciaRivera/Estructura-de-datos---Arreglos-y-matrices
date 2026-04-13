@@ -16,6 +16,12 @@ class Actv3
                 arreglo[i] = 0;
             }
         }
+
+        Console.WriteLine("Arreglo después de cambiar impares por cero:");
+        foreach (int valor in arreglo)
+        {
+            Console.Write(valor + " ");
+        }
     }
 
     public static void MultiplicarPorIndice(int[] arreglo)
@@ -24,6 +30,10 @@ class Actv3
         {
             // Multiplicar cada valor por su índice
             arreglo[i] *= i;
+        }
+        Console.WriteLine("\nArreglo después de multiplicar por índice:");
+        foreach (int valor in arreglo)        {
+            Console.Write(valor + " ");
         }
     }
 
