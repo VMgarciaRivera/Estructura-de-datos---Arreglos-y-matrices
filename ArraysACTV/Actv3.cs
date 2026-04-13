@@ -8,17 +8,18 @@ class Actv3
 {
     public static void CambiarImparesPorCero(int[] arreglo)
     {
-        for (int i = 0; i < arreglo.Length; i++)
+        int[] arregloCopia = (int[])arreglo.Clone(); // Clonar el arreglo original para mostrarlo después
+        for (int i = 0; i < arregloCopia.Length; i++)
         {
             // Cambiar valores impares por cero
-            if (arreglo[i] % 2 != 0)
+            if (arregloCopia[i] % 2 != 0)
             {
-                arreglo[i] = 0;
+                arregloCopia[i] = 0;
             }
         }
 
         Console.WriteLine("Arreglo después de cambiar impares por cero:");
-        foreach (int valor in arreglo)
+        foreach (int valor in arregloCopia)
         {
             Console.Write(valor + " ");
         }
@@ -26,13 +27,14 @@ class Actv3
 
     public static void MultiplicarPorIndice(int[] arreglo)
     {
-        for (int i = 0; i < arreglo.Length; i++)
+        int[] arregloCopia = (int[])arreglo.Clone(); // Clonar el arreglo original para mostrarlo después
+        for (int i = 0; i < arregloCopia.Length; i++)
         {
             // Multiplicar cada valor por su índice
-            arreglo[i] *= i;
+            arregloCopia[i] *= i;
         }
         Console.WriteLine("\nArreglo después de multiplicar por índice:");
-        foreach (int valor in arreglo)        {
+        foreach (int valor in arregloCopia)        {
             Console.Write(valor + " ");
         }
     }
