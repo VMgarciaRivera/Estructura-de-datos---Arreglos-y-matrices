@@ -1,6 +1,7 @@
 import Arrays.Actv1;
 import Arrays.Actv2;
 import Arrays.Actv3;
+import Arrays.Actv4;
 import matrices.*;
 import EjercicioIndividual.TemperatureHistory;
 
@@ -18,13 +19,14 @@ public class Main {
             System.out.println("1. Actividad 1: Declaración y creación de un arreglo");
             System.out.println("2. Actividad 2: Recorrer el arreglo");
             System.out.println("3. Actividad 3: Modificación del arreglo");
+            System.out.println("4. Actividad 4: Búsqueda lineal en el arreglo");
             System.out.println("Matrices:");
-            System.out.println("4. Actividad 1: Declaración y creación de una matriz");
-            System.out.println("5. Actividad 2: Recorrer la matriz");
-            System.out.println("6. Actividad 3: operaciones con matriz");
+            System.out.println("5. Actividad 1: Declaración y creación de una matriz");
+            System.out.println("6. Actividad 2: Recorrer la matriz");
+            System.out.println("7. Actividad 3: operaciones con matriz");
             System.out.println("Ejercicio Individual por estudiante:");
-            System.out.println("7. Ejercicio 13 Historial de temperaturas");
-            System.out.println("8. Salir");
+            System.out.println("8. Ejercicio 13 Historial de temperaturas");
+            System.out.println("9. Salir");
             int opcion = new Scanner(System.in).nextInt();
 
             switch (opcion) {
@@ -43,21 +45,26 @@ public class Main {
                         System.out.println("Arreglo después de multiplicar por índice: " + java.util.Arrays.toString(arreglo));
                     break;
                 case 4:
+                    System.out.print("Ingrese el valor a buscar en el arreglo: ");
+                    int valor = new Scanner(System.in).nextInt();
+                    Actv4.busquedaLineal(arreglo, valor);
+                    break;
+                case 5:
                     matrices.Actv1 actvMatriz = new matrices.Actv1();
                     matriz = actvMatriz.crearMatriz();
                     break;
-                case 5:
+                case 6:
                     matrices.Actv2.recorrerPorFilas(matriz);
                     matrices.Actv2.recorrerPorColumnas(matriz);
                     break;
-                case 6:
+                case 7:
                     int suma = matrices.Actv3.sumarElementos(matriz);
                     System.out.println("Suma de todos los elementos: " + suma);
                     matrices.Actv3.intercambiarFilas(matriz);
                     System.out.println("Matriz después de intercambiar la primera fila con la última:");
                     matrices.Actv2.recorrerPorFilas(matriz);
                     break;
-                case 7:
+                case 8:
                     System.out.println("De cuantos dias va a tomar la temperatura? (máximo 30)");
                     int dias = new Scanner(System.in).nextInt();
                     if (dias > 30) {
@@ -76,7 +83,7 @@ public class Main {
                     System.out.println("Gráfico de temperaturas:");
                     tempHistory.printTemperatureGraph();
                     break;
-                case 8:
+                case 9:
                     System.out.println("Saliendo del programa...");
                     return;
                 default:
