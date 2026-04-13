@@ -1,5 +1,6 @@
 //busqueda lineal de un arreglo
 
+namespace ArraysACTV;
 class Actv4
 {
     public static int BusquedaLineal(int[] arreglo, int valorBuscado)

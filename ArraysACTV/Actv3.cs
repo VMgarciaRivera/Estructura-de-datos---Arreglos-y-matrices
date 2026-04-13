@@ -3,6 +3,7 @@ Cambiar todos los valores impares por cero.
 Multiplicar todos los valores por su índice.
 */
 
+namespace ArraysACTV;
 class Actv3
 {
     public static void CambiarImparesPorCero(int[] arreglo)

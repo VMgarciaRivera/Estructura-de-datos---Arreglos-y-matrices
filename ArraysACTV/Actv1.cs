@@ -3,7 +3,7 @@ Declaración y creación de un arreglo
 Declarar un arreglo de 10 enteros en cada lenguaje dado
 Inicializarlo con valores aleatorios.
 */
-
+namespace ArraysACTV;
 class Actv1
 {
     public static int[] CrearArreglo(){

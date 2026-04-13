@@ -1,6 +1,7 @@
 //RECORRER EL ARRAY DE Actv1 USANDO UN BLUCE FOR CLASICO
 //RECORRER EL ARRAY DE Actv1 USANDO UN BLUCE FOR-EACH
 
+namespace ArraysACTV;
 class Actv2
 {
     public static void RecorrerArregloFor(int[] arreglo)
